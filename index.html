@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JSON Minifier helps you to minify your JSON code so that they can't be easily stolen! Author: 'LeGend077' @ Github">
+    <title>JSON Minifier | LeGend077</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="root">
+        <textarea name="code" id="code" placeholder="JSON Input" spellcheck="false"></textarea>
+        <textarea name="minified" id="minified" readonly placeholder="Minified Output"></textarea>
+    </div>
+    <br/>
+    <center><button id="minify" onclick="run()">Minify</button></center>
+
+    <script>
+        function run(){
+        var myJson = document.getElementById("code").value;var minified = JSON.stringify(JSON.parse(myJson));
+        window.onerror = function err() {
+            var message = 'Error! Please check your code, there is an error detected in your code.'
+            alert(message);
+            return true;
+            };
+            document.getElementById("minified").innerHTML = minified;
+    }
+    </script>
+</body>
+</html>

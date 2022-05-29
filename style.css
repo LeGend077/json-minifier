@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #222;
+}
+
+.root{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.root textarea{
+    height: 70vh;
+    background: #222;
+    font-size: large;
+    font-family: monospace;
+    word-spacing: 2px;
+    color: #f1f1f1;
+}
+
+button#minify{
+    padding: 15px 20px;
+    font-size: large;
+    background: #f2f2f2;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button#minify:hover{
+    animation: myAnim 2.5s infinite;
+}
+@keyframes myAnim {
+    0%{ transform: rotateZ(0deg); }
+    100%{ transform: rotateZ(360deg); }
+}
